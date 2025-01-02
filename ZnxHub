@@ -1,40 +1,49 @@
 local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
 
-local window = DrRayLibrary:Load("DrRay!", "Default")
+local window = DrRayLibrary:Load("DrRay", "Default")
 
-local tab1 = DrRayLibrary.newTab("Tab 1", "ImageIdHere")
+local tab = DrRayLibrary.newTab("My Tab", "ImageIdHere")
 
-- Add elements to the first tab
-tab1.newLabel("Hello, this is Tab 1.")
-tab1.newButton("Button", "Prints Hello!", function()
+tab.newButton("Button", "Prints Hello!", function()
     print('Hello!')
 end)
-tab1.newToggle("Toggle", "Toggle! (prints the state)", true, function(toggleState)
+
+tab.newToggle("Toggle", "Toggle! (prints the state)", true, function(toggleState)
     if toggleState then
         print("On")
     else
         print("Off")
     end
 end)
-tab1.newInput("Input", "Prints your input.", function(text)
-    print("Entered text in Tab 1: " .. text)
+
+tab.newInput("Input", "Prints your input.", function(text)
+    print("Entered text: " .. text)
 end)
 
--- Create the second tab with a different image ID
-local tab2 = DrRayLibrary.newTab("Tab 2", "ImageIdLogoHere")
-
--- Add elements to the second tab
-tab2.newLabel("Hello, this is Tab 2.")
-tab2.newButton("Button", "Prints Hello!", function()
-    print('Hello!')
-end)
-tab2.newToggle("Toggle", "Toggle! (prints the state)", true, function(toggleState)
-    if toggleState then
-        print("On")
-    else
-        print("Off")
-    end
-end)
-tab2.newDropdown("Dropdown", "Select one of these options!", {"water", "dog", "air", "bb", "airplane", "wohhho", "yeay", "delete"}, function(selectedOption)
+tab.newDropdown("Dropdown", "Select one of these options!", {"water", "dog", "air", "bb", "airplane", "wohhho", "yeay", "delete"}, function(selectedOption)
     print(selectedOption)
 end)
+
+tab.newKeybind("Input Key", "Press the key to start; it will be printed out.", function(key)
+    print(key)
+end)
+
+tab.newSlider("Slider", "Epic slider", 1000, false, function(num)
+    print(num)
+end)
+
+window:Toggle()
+
+window:Open()
+
+window:Close()
+
+window:Hide()
+
+window:Show()
+
+local mainColor = Color3.fromRGB(10, 30, 10) -- Customize as you wish; these are in RGB format. (mainColor applies to main colors like background, buttons, etc.)
+
+local secondColor = Color3.fromRGB(50, 50, 10) -- Secondary Color; applies to Toggle when activated and slider background.
+
+window:SetTheme(mainColor, secondColor)
