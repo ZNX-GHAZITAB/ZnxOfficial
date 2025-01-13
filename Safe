@@ -7,8 +7,16 @@ local whitelist = {
     ["XPhantom_xdemonx"] = true
 }
 
-if whitelist[player.Name] then
-    print("Whitelisted!")
-else
-    player:Kick("xd ez")
+-- Function to check if the player is authorized
+local function isAuthorized()
+    return whitelist[player.Name] ~= nil
 end
+
+-- Check authorization
+if not isAuthorized() then
+    player:Kick("Unauthorized player: Access Denied")
+    return -- Prevent further script execution
+end
+
+-- Whitelisted player logic
+print("Whitelisted!")
