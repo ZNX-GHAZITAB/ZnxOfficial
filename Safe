@@ -1,7 +1,7 @@
 local player = game.Players.LocalPlayer
 
 local whitelist = {
-    ["BLOXY1354745"] = true, ["James1008797"] = true, ["0Tripyxman0"] = true, 
+    ["BLOXY1354745"] = true, ["2008bestyearfr"] = true, ["0Tripyxman0"] = true, 
     ["KingZackDabest"] = true, ["mukhtartab"] = true, ["Hello_ImNeW089"] = true, 
     ["NIGHTHELLSOUL"] = true, ["normtupe52005"] = true, ["Bigbentasteno"] = true, 
     ["XPhantom_xdemonx"] = true
