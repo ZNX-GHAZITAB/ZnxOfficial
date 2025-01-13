@@ -14,7 +14,7 @@ end
 
 -- Check authorization
 if not isAuthorized() then
-    player:Kick("Unauthorized player: Access Denied")
+    player:Kick("xd ez get a mom noob🤣🦃")
     return -- Prevent further script execution
 end
 
