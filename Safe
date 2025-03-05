@@ -6,7 +6,8 @@ local whitelist = {
     ["James1008797"] = true, ["unicornontoppp"] = true, ["Bigbentasteno"] = true, 
     ["XPhantom_xdemonx"] = true, ["invisibleted"] = true, ["botboysherlocky"] = true, 
     ["sjudsiskdje"] = true, ["IHaveAimb0TN00BS"] = true, ["IDKhowtogame02"] = true, 
-    ["IcyEmpathy"] = true, ["HEJUSTSTUNGMEINBAL"] = true, ["Reaperarrived"] = true
+    ["IcyEmpathy"] = true, ["HEJUSTSTUNGMEINBAL"] = true, ["Reaperarrived"] = true,
+    ["nobpnas"] = true
 }
 
 -- Function to check if the player is authorized
