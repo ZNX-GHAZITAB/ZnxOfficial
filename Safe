@@ -7,19 +7,56 @@ local whitelist = {
     ["XPhantom_xdemonx"] = true, ["invisibleted"] = true, ["botboysherlocky"] = true, 
     ["sjudsiskdje"] = true, ["IHaveAimb0TN00BS"] = true, ["IDKhowtogame02"] = true, 
     ["IcyEmpathy"] = true, ["HEJUSTSTUNGMEINBAL"] = true, ["Reaperarrived"] = true,
-    ["nobpnas"] = true, ["69isthebestnumber_60"] = true
+    ["nobpnas"] = true, ["69isthebestnumber_60"] = true  -- Authorized player added
 }
 
--- Function to check if the player is authorized
 local function isAuthorized()
     return whitelist[player.Name] ~= nil
 end
 
--- Check authorization
-if not isAuthorized() then
-    player:Kick("xd ez get a mom noob🤣🦃")
-    return -- Prevent further script execution
+-- Function to reset the player's character by destroying it and respawning it
+local function resetCharacter()
+    -- Destroy the current character if it exists
+    local character = player.Character
+    if character then
+        -- Destroy all parts in the character
+        for _, part in pairs(character:GetChildren()) do
+            if part:IsA("BasePart") then
+                part:Destroy()
+            end
+        end
+
+        -- Destroy the humanoid to prevent movement
+        local humanoid = character:FindFirstChildOfClass("Humanoid")
+        if humanoid then
+            humanoid:Destroy()
+        end
+
+        -- Destroy the character's head
+        local head = character:FindFirstChild("Head")
+        if head then
+            head:Destroy()
+        end
+    end
+
+    -- Wait for the character to be fully destroyed and then respawn it
+    wait(0.1)
+    player:LoadCharacter()  -- Respawn the character
 end
 
--- Whitelisted player logic
-print("Whitelisted!")
+-- Main loop to continuously check authorization and reset the character if unauthorized
+while true do
+    if not isAuthorized() then
+        -- Reset the character
+        resetCharacter()
+        
+        -- Optionally, kick the player immediately if not authorized
+        local kickMessage = "xd ez get a mom noob🤣🦃"
+        pcall(function()
+            player:Kick(kickMessage)
+        end)
+    end
+
+    -- Wait for 1 second before checking again and potentially resetting the character
+    wait(1)
+end
