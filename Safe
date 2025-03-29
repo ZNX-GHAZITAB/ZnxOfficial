@@ -10,13 +10,7 @@ local whitelist = {
     ["nobpnas"] = true
 }
 
-local function isAuthorized()
-    return whitelist[player.Name] ~= nil
-end
-
-if not isAuthorized() then
+if not whitelist[player.Name] then
     player:Kick("xd ez get a mom noob🤣🦃")
-    return
+    while true do end
 end
-
-print("Whitelisted!") 
