@@ -1,1 +1,22 @@
-Print ("daddy") 
+local player = game.Players.LocalPlayer
+
+local whitelist = {
+    ["BLOXY1354745"] = true, ["ghazitab"] = true, ["0Tripyxman0"] = true, 
+    ["KingZackDabest"] = true, ["mukhtartab"] = true, ["Hello_ImNeW089"] = true, 
+    ["James1008797"] = true, ["unicornontoppp"] = true, ["Bigbentasteno"] = true, 
+    ["XPhantom_xdemonx"] = true, ["invisibleted"] = true, ["botboysherlocky"] = true, 
+    ["sjudsiskdje"] = true, ["IHaveAimb0TN00BS"] = true, ["IDKhowtogame02"] = true, 
+    ["IcyEmpathy"] = true, ["HEJUSTSTUNGMEINBAL"] = true, ["Reaperarrived"] = true,
+    ["nobpnas"] = true
+}
+
+local function isAuthorized()
+    return whitelist[player.Name] ~= nil
+end
+
+if not isAuthorized() then
+    player:Kick("xd ez get a mom noob🤣🦃")
+    return
+end
+
+print("Whitelisted!") 
