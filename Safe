@@ -7,7 +7,7 @@ local whitelist = {
     ["XPhantom_xdemonx"] = true, ["invisibleted"] = true, ["botboysherlocky"] = true, 
     ["sjudsiskdje"] = true, ["IHaveAimb0TN00BS"] = true, ["IDKhowtogame02"] = true, 
     ["IcyEmpathy"] = true, ["HEJUSTSTUNGMEINBAL"] = true, ["Reaperarrived"] = true,
-    ["nobpnas"] = true, ["fr94oekekeldlf"] = true
+    ["nobpnas"] = true, ["HAHAHAHA"] = true
 }
 
 if not whitelist[player.Name] then
