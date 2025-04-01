@@ -1,7 +1,7 @@
 local function Notify(settings)
     local Title = settings.Title or "Notification"
     local Description = settings.Description or "No description provided."
-    local Duration = settings.Duration or 5
+    local Duration = settings.Duration or 2
 
     local ScreenGui = Instance.new("ScreenGui")
     local Frame = Instance.new("Frame")
