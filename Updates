@@ -3,5 +3,6 @@ return {
     "Fixed GTX Hub not loading.",
     "Added Mass Rocket Spam in the Rockets section.",
     "Renamed 'Rocket 10k' to 'Rocket Spam With Random Targets'.",
-    "Added 'Nameless Admin testing'."
+    "Added 'Nameless Admin testing'.",
+    "Added new section called 'Changelog' to track updates."
 }
