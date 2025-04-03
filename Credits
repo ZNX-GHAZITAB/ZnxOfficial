@@ -1,4 +1,3 @@
--- Credits.lua
 return {
     "ZNX Hub inspired by GTX Hub",
     "Rocket Spam 1 (Modified version of rocket script Taz gave me)",
