@@ -30,4 +30,4 @@ Welcome to my **Roblox Exploits & Scripts** repo! Here, you'll find:
 ## 📂 Scripts  
 ### ⚔️ **ZNX HUB** (Main Script)  
 ```lua
-loadstring(game:HttpGet("https://your-script-link.com/znxhub.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ZNX-GHAZITAB/ZnxOfficial/refs/heads/main/ZnxHub"))()
