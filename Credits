@@ -4,5 +4,7 @@ return {
     "Phantom Smoke (Exact version of smoke script from PhantomHubX)",
     "Animation Section and MotionHub (Suggested by Phantom)",
     "Fling with Freeze Detection (Credits to Luka for suggesting and helping with testing)",
-    "Auto Tool Grabber (Suggested by Luka)"
+    "Auto Tool Grabber (Suggested by Luka)",
+"Auto Use FF Command After Respawn (Suggested by Luka)",
+"Quiz bot (Took it from PhantomHubX)" 
 }
