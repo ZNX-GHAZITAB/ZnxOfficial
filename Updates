@@ -1,7 +1,22 @@
 return {
-    "Version 1.0.1: First update after release.",
+    -- Newest update (Version 1.1.0)
+    "Version 1.1.0: Second update after release.",
+    "Changed key to 'XPhantom_xdemonx'.",
+    "Rearranged the order of scripts in various sections.",
+    "Removed 'HD Admin Spam' from the 'Other' section.",
+    "Removed 'Sword Reach' from the 'Reach' section.",
+    "Renamed 'Rocket Spam 1' to 'Rocket Spam'.",
+    "Added 'Auto FF Command After Respawn' to the 'Other' section.",
+    "Added 'Quiz Bot' to the 'Other' section.",
+    "Added 'Ultimate AFK Killing' to the 'Other' section.",
+    "Added 'Loop Client Bring' to the 'Reach' section.",
+    
+    -- Divider between updates
+    function(tab) tab:CreateDivider() end,
+
+    -- Older update (Version 1.0.0)
+    "Version 1.0.0: First update after release.",
     "Fixed GTX Hub not loading.",
-    "Added Mass Rocket Spam in the Rockets section.",
-    "Renamed 'Rocket 10k' to 'Rocket Spam With Random Targets'.",
-    "Added new section called 'Changelog' to track updates."
+    "Added 'Mass Rocket Spam' in the Rockets section.",
+    "Renamed 'Rocket 10k' to 'Rocket Spam With Random Targets'."
 }
