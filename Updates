@@ -1,5 +1,18 @@
 return {
-    -- Newest update (Version 1.1.0)
+    -- Newest update (Version 1.2.0)
+    "Version 1.2.0: Third update after release.",
+    "Smoke Section:",
+    "+ Added Light Smoke.",
+    "+ Added Medium V1 Smoke.",
+    "+ Added Medium V2 Smoke.",
+    "Admin/Hub Section:",
+    "+ Added Nameless Admin [Old/Official].",
+    "+ Added ChatBot Hub.",
+
+    -- Divider between updates
+    function(tab) tab:CreateDivider() end,
+
+    -- Second update after release (Version 1.1.0)
     "Version 1.1.0: Second update after release.",
     "Changed key to 'XPhantom_xdemonx'.",
     "Rearranged the order of scripts in various sections.",
@@ -10,13 +23,14 @@ return {
     "Added 'Quiz Bot' to the 'Other' section.",
     "Added 'Ultimate AFK Killing' to the 'Other' section.",
     "Added 'Loop Client Bring' to the 'Reach' section.",
-    
+
     -- Divider between updates
     function(tab) tab:CreateDivider() end,
 
-    -- Older update (Version 1.0.0)
+    -- First update after release (Version 1.0.0)
     "Version 1.0.0: First update after release.",
     "Fixed GTX Hub not loading.",
     "Added 'Mass Rocket Spam' in the Rockets section.",
-    "Renamed 'Rocket 10k' to 'Rocket Spam With Random Targets'."
+    "Renamed 'Rocket 10k' to 'Rocket Spam With Random Targets'.",
+    "Added 'Nameless Admin Testing'.",
 }
