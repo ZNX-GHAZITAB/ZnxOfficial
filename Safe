@@ -1,44 +1,7 @@
-local function Notify(settings)
-    local Title = settings.Title or "Notification"
-    local Description = settings.Description or "No description provided."
-    local Duration = settings.Duration or 5
-
-    local ScreenGui = Instance.new("ScreenGui")
-    local Frame = Instance.new("Frame")
-    local TitleLabel = Instance.new("TextLabel")
-    local DescLabel = Instance.new("TextLabel")
-
-    ScreenGui.Parent = gethui and gethui() or game.CoreGui
-    ScreenGui.ResetOnSpawn = false
-
-    Frame.Size = UDim2.new(0, 300, 0, 100)
-    Frame.Position = UDim2.new(0.5, -150, 0.1, 0)
-    Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-    Frame.BorderSizePixel = 2
-    Frame.Parent = ScreenGui
-
-    TitleLabel.Size = UDim2.new(1, 0, 0.3, 0)
-    TitleLabel.BackgroundTransparency = 1
-    TitleLabel.Text = Title
-    TitleLabel.TextSize = 18
-    TitleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-    TitleLabel.Font = Enum.Font.SourceSansBold
-    TitleLabel.Parent = Frame
-
-    DescLabel.Size = UDim2.new(1, 0, 0.7, 0)
-    DescLabel.Position = UDim2.new(0, 0, 0.3, 0)
-    DescLabel.BackgroundTransparency = 1
-    DescLabel.Text = Description
-    DescLabel.TextSize = 14
-    DescLabel.TextWrapped = true
-    DescLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
-    DescLabel.Font = Enum.Font.SourceSans
-    DescLabel.Parent = Frame
-
-    task.spawn(function()
-        wait(Duration)
-        ScreenGui:Destroy()
-    end)
+repeat task.wait() until game:IsLoaded()
+if not game:GetService("RunService"):IsClient() then
+    game:Shutdown()
+    while true do end
 end
 
 local player = game.Players.LocalPlayer
@@ -46,19 +9,16 @@ local player = game.Players.LocalPlayer
 local whitelist = {
     ["BLOXY1354745"] = true, ["ghazitab"] = true, ["0Tripyxman0"] = true, 
     ["KingZackDabest"] = true, ["mukhtartab"] = true, ["Hello_ImNeW089"] = true, 
-    ["James1008797"] = true, ["unicornontoppp"] = true, ["Bigbentasteno"] = true, 
-    ["XPhantom_xdemonx"] = true, ["invisibleted"] = true, ["botboysherlocky"] = true, 
-    ["sjudsiskdje"] = true, ["IHaveAimb0TN00BS"] = true, ["IDKhowtogame02"] = true, 
+    ["James1008797"] = true, ["Bigbentasteno"] = true, 
+    ["XPhantom_xdemonx"] = true, ["botboysherlocky"] = true, 
+    ["IHaveAimb0TN00BS"] = true, ["IDKhowtogame02"] = true, 
     ["IcyEmpathy"] = true, ["HEJUSTSTUNGMEINBAL"] = true, ["Reaperarrived"] = true,
-    ["nobpnas"] = true, ["placeholder"] = true
+    ["nobpnas"] = true, ["placeholder"] = true,
+    ["Swordfightingnow"] = true, ["TheUnfogivenAct"] = true
 }
 
 if whitelist[player.Name] then
-    Notify({
-        Title = "Access Granted",
-        Description = "You are whitelisted! Enjoy your experience.",
-        Duration = 2
-    })
+    -- Player is whitelisted, do nothing
 else
     player:Kick("xd ez get a mom noob🤣🦃")
 
