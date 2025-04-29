@@ -14,7 +14,7 @@ local whitelist = {
     ["IHaveAimb0TN00BS"] = true, ["IDKhowtogame02"] = true, 
     ["IcyEmpathy"] = true, ["HEJUSTSTUNGMEINBAL"] = true, ["Reaperarrived"] = true,
     ["nobpnas"] = true, ["placeholder"] = true,
-    ["Swordfightingnow"] = true, ["TheUnfogivenAct"] = true
+    ["swordfightingnow"] = true, ["TheUnforgivenAct"] = true
 }
 
 if whitelist[player.Name] then
